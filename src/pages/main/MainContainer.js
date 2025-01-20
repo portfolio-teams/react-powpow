@@ -127,96 +127,109 @@ const Main = () => {
   return (
     <>
       <Header />
-        <S.SwiperContainer>
-          <Swiper 
-            onSlideChange={(e) => onChangeIndex(e.realIndex) }
-            className="mySwiper1"
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            pagination={{ dynamicBullets: true }}
-          >
-            {[1, 2, 3].map((num, i) => (
-              <SwiperSlide key={i}>
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/layout/banner${num}.png`}
-                  alt={`메인배너$${num}`}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <S.SwiperPager>
-            <p>{`${activeIndex} / ${bannerLength}`}</p>
-          </S.SwiperPager>
-        </S.SwiperContainer>
+        {/*<S.SwiperContainer>*/}
+        {/*  <Swiper */}
+        {/*    onSlideChange={(e) => onChangeIndex(e.realIndex) }*/}
+        {/*    className="mySwiper1"*/}
+        {/*    slidesPerView={1}*/}
+        {/*    spaceBetween={30}*/}
+        {/*    loop={true}*/}
+        {/*    pagination={{ dynamicBullets: true }}*/}
+        {/*  >*/}
+        {/*    {[1, 2, 3].map((num, i) => (*/}
+        {/*      <SwiperSlide key={i}>*/}
+        {/*        <img*/}
+        {/*          src={`${process.env.PUBLIC_URL}/assets/images/layout/banner${num}.png`}*/}
+        {/*          alt={`메인배너$${num}`}*/}
+        {/*        />*/}
+        {/*      </SwiperSlide>*/}
+        {/*    ))}*/}
+        {/*  </Swiper>*/}
+        {/*  <S.SwiperPager>*/}
+        {/*    <p>{`${activeIndex} / ${bannerLength}`}</p>*/}
+        {/*  </S.SwiperPager>*/}
+        {/*</S.SwiperContainer>*/}
 
-        <S.SwiperContainer>
-          <S.BannerTitle>
-            <h2>지금 제일 인기 있는 상품이에요.</h2>
-          </S.BannerTitle>
-          <Swiper
-            className="mySwiper2"
-            slidesPerView={"auto"}
-            spaceBetween={20}
-          >
-            {[
-              { id: 1, src: "dentalgum1.png", coupon: "강아지 인기" },
-              { id: 2, src: "shampoo3.png", coupon: "고양이 특가" },
-              { id: 3, src: "feed.png", coupon: "세일 특가" },
-              { id: 4, src: "dentalgum1.png", coupon: "강아지 인기" },
-              { id: 5, src: "shampoo3.png", coupon: "고양이 특가" },
-              { id: 6, src: "feed.png", coupon: "세일 특가" },
-            ].map(({src, coupon, id}, i) => (
-              <SwiperSlide key={i}>
-                <S.ImageAndCart>
-                  <S.HotImage>
-                    <Link to="/store">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/layout/${src}`}
-                        alt={`상품-${i + 1}`}
-                      />
-                    </Link>
-                    <S.Coupon>{coupon}</S.Coupon>
-                    <S.Heart>
-                        <HeartBtn id={id} type={"product"} />
-                    </S.Heart>
-                  </S.HotImage>
-                  <S.Cart>
-                    <Link to={"/store"}>
-                      {/* <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/layout/shopping_cart_icon.png`}
-                        alt="장바구니아이콘"
-                      /> */}
-                      <p>인기상품 보러가기</p>
-                    </Link>
-                  </S.Cart>
-                </S.ImageAndCart>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </S.SwiperContainer>
 
-        <S.Container>
-          <S.TestWrap style={{ position: "relative" }}>
-            <img
+            <S.GradientBackground>
+               <div className="gradients-container">
+                 <div className="g1"></div>
+                 <div className="g2"></div>
+                 <div className="g3"></div>
+                 <div className="g4"></div>
+                 <div className="g5"></div>
+               </div>
+              <S.Text>여기에 글자</S.Text>
+             </S.GradientBackground>
+
+
+      {/*<S.SwiperContainer>*/}
+      {/*  <S.BannerTitle>*/}
+      {/*    <h2>지금 제일 인기 있는 상품이에요.</h2>*/}
+      {/*  </S.BannerTitle>*/}
+      {/*  <Swiper*/}
+      {/*      className="mySwiper2"*/}
+      {/*      slidesPerView={"auto"}*/}
+      {/*      spaceBetween={20}*/}
+      {/*  >*/}
+      {/*    {[*/}
+      {/*      {id: 1, src: "dentalgum1.png", coupon: "강아지 인기"},*/}
+      {/*      {id: 2, src: "shampoo3.png", coupon: "고양이 특가"},*/}
+      {/*      {id: 3, src: "feed.png", coupon: "세일 특가"},*/}
+      {/*      {id: 4, src: "dentalgum1.png", coupon: "강아지 인기"},*/}
+      {/*      {id: 5, src: "shampoo3.png", coupon: "고양이 특가"},*/}
+      {/*      {id: 6, src: "feed.png", coupon: "세일 특가"},*/}
+      {/*    ].map(({src, coupon, id}, i) => (*/}
+      {/*        <SwiperSlide key={i}>*/}
+      {/*          <S.ImageAndCart>*/}
+      {/*            <S.HotImage>*/}
+      {/*              <Link to="/store">*/}
+      {/*                <img*/}
+      {/*                    src={`${process.env.PUBLIC_URL}/assets/images/layout/${src}`}*/}
+      {/*                    alt={`상품-${i + 1}`}*/}
+      {/*                />*/}
+      {/*              </Link>*/}
+      {/*              <S.Coupon>{coupon}</S.Coupon>*/}
+      {/*              <S.Heart>*/}
+      {/*                <HeartBtn id={id} type={"product"}/>*/}
+      {/*              </S.Heart>*/}
+      {/*            </S.HotImage>*/}
+      {/*            <S.Cart>*/}
+      {/*              <Link to={"/store"}>*/}
+      {/*                /!* <img*/}
+      {/*                  src={`${process.env.PUBLIC_URL}/assets/images/layout/shopping_cart_icon.png`}*/}
+      {/*                  alt="장바구니아이콘"*/}
+      {/*                /> *!/*/}
+      {/*                <p>인기상품 보러가기</p>*/}
+      {/*              </Link>*/}
+      {/*            </S.Cart>*/}
+      {/*          </S.ImageAndCart>*/}
+      {/*        </SwiperSlide>*/}
+      {/*    ))}*/}
+      {/*  </Swiper>*/}
+      {/*</S.SwiperContainer>*/}
+
+      <S.Container>
+        <S.TestWrap style={{position: "relative"}}>
+          <img
               className="banner"
               src={`${process.env.PUBLIC_URL}/assets/images/layout/testbanner05.png`}
               alt="테스트 배너"
-            />
-            <S.TestButton to="/petsonal">
-              테스트 버튼
-            </S.TestButton>
-          </S.TestWrap>
+          />
+          <S.TestButton to="/petsonal">
+            테스트 버튼
+          </S.TestButton>
+        </S.TestWrap>
 
-          <S.RecommendSection>
-            <S.CommunityPlusMore>
-              <S.TitleWrapper>
-                <h2>이런 게시물은 어때요?</h2>
-                <Link to="/community">+ 더보기</Link>
-              </S.TitleWrapper>
-            </S.CommunityPlusMore>
+        <S.RecommendSection>
+          <S.CommunityPlusMore>
+            <S.TitleWrapper>
+              <h2>이런 게시물은 어때요?</h2>
+              <Link to="/community">+ 더보기</Link>
+            </S.TitleWrapper>
+          </S.CommunityPlusMore>
 
-            <S.RecommendContainer>
+          <S.RecommendContainer>
               {recommendCommunityLarge}
               {recommendCommunity}
             </S.RecommendContainer>
