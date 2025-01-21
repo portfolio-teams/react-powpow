@@ -149,20 +149,24 @@ const Main = () => {
         {/*    <p>{`${activeIndex} / ${bannerLength}`}</p>*/}
         {/*  </S.SwiperPager>*/}
         {/*</S.SwiperContainer>*/}
+        <S.GradientBackgroundWrap>
 
             <S.GradientBackground>
-               <div className="gradients-container">
-                 <div className="g1"></div>
-                 <div className="g2"></div>
-                 <div className="g3"></div>
-                 <div className="g4"></div>
-                 <div className="g5"></div>
-               </div>
-              <S.Text>
-                <p>반려동물을 위한 컬러풀한 선택</p>
-                <p>컬러를 통해 반려동물의 성향과 스타일에 대한 정확한 분석 결과를 확인해 보세요.</p>
-              </S.Text>
-             </S.GradientBackground>
+                <div className="gradients-container">
+                    <div className="g1"></div>
+                    <div className="g2"></div>
+                    <div className="g3"></div>
+                    <div className="g4"></div>
+                    <div className="g5"></div>
+                </div>
+                <S.Text>
+                    <p>반려동물을 위한 컬러풀한 선택</p>
+                    <p>컬러를 통해 반려동물의 성향과 스타일에 대한 정확한 분석 결과를 확인해 보세요.</p>
+                </S.Text>
+            </S.GradientBackground>
+
+        </S.GradientBackgroundWrap>
+
 
 
       {/*<S.SwiperContainer>*/}
@@ -215,11 +219,14 @@ const Main = () => {
         <S.TestWrap style={{position: "relative"}}>
           <img
               className="banner"
-              src={`${process.env.PUBLIC_URL}/assets/images/layout/testbanner05.png`}
+              src={`${process.env.PUBLIC_URL}/assets/images/layout/testbanner05.jpg`}
               alt="테스트 배너"
           />
           <S.TestButton to="/petsonal">
-            테스트 버튼
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/images/layout/testbutton.png`}
+                alt="테스트 버튼"
+              />
           </S.TestButton>
         </S.TestWrap>
 
