@@ -25,7 +25,9 @@ S.Container = styled.div`
     overflow: hidden;
 
     & .banner {
-        width: 1920px;
+        width: 1472px;
+        margin-top: 150px;
+        border-radius: 20px;
     }
 `;
 
@@ -216,18 +218,21 @@ S.TestWrap = styled.div`
 
 S.TestButton = styled(Link)`
     position: absolute;
-    left : 240px;
-    bottom : 340px;
-
+    left : 239px;
+    bottom : 186px;
     display: flex;
     justify-content: center;
     color : #fff;
     align-items: center;
     background-color: #113f8a;
-    width: 300px;
-    height: 60px;
-    border-radius: 30px;
+    width: 360px;
+    height: 96px;
+    border-radius: 50px;
     font-size: 24px;
+    
+    & img {
+        width: 360px;
+    }
 `;
 
 ////////////////////////////////////////// 커뮤니티
@@ -536,18 +541,19 @@ const moveHorizontal = keyframes`
     transform: translateX(50%) translateY(10%);
   }
   100% {
-    transform: translateX(-50%) translateY(-10%);
+    transform: translateX(-50%) translateY(-10%)GradientBackground;
   }
 `;
 
 S.GradientBackground = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(40deg, rgba(183, 16, 232, 1),rgba(97, 16, 232, 1));
-  top: 0;
-  left: 0;
+    width: 96vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(40deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 246, 0, 0.98), rgba(255, 0, 253, 0.98));
+    top: 0;
+    left: 0;
+    border-radius: 20px;
 
   .gradients-container {
     filter: url(#goo) blur(40px);
@@ -570,28 +576,28 @@ S.GradientBackground = styled.div`
   }
 
   .g1 {
-    background: radial-gradient(circle at center, rgba(232, 16, 16, 1) 0, rgba(253, 130, 11, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(232, 16, 16, 0.51) 0, rgba(253, 130, 11, 0) 50%) no-repeat;
     animation: ${moveVertical} 10s ease infinite;
   }
 
   .g2 {
-    background: radial-gradient(circle at center, rgba(56, 232, 16, 1) 0, rgba(255, 218, 58, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(56, 232, 16,  0.51) 0, rgba(255, 218, 58, 0) 50%) no-repeat;
     transform-origin: calc(50% - 400px);
     animation: ${moveInCircle} 20s reverse infinite;
   }
 
   .g3 {
-    background: radial-gradient(circle at center, rgba(232, 228, 16, 1) 0, rgba(169, 144, 221, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(232, 228, 16,  0.51) 0, rgba(169, 144, 221, 0) 50%) no-repeat;
     animation: ${moveHorizontal} 10s ease infinite;
   }
 
   .g4 {
-    background: radial-gradient(circle at center, rgba(16, 115, 232, 1) 0, rgba(16, 233, 231, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(16, 115, 232,  0.51) 0, rgba(16, 233, 231, 0) 50%) no-repeat;
     animation: ${moveInCircle} 15s infinite;
   }
 
   .g5 {
-    background: radial-gradient(circle at center, rgba(232, 16, 196, 1) 0, rgba(34, 193, 195, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(232, 16, 196,  0.51) 0, rgba(34, 193, 195, 0) 50%) no-repeat;
     animation: ${moveVertical} 15s infinite;
   }
 `;
@@ -604,15 +610,32 @@ S.Text = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   /* font-size: 2rem; */
-  color: #FFFFFF;
+  //color: #FFFFFF;
+    color: black;
   text-align: center;
   font-family: Arial, sans-serif;
   font-weight: bold;
 
-  & p:nth-child(1) {
-    font-size: 100px;
-
+  & p:nth-child(1) {    
+    font-size: 80px;
+    margin-bottom: 30px;
   }
+
+    & p:nth-child(2) {
+    font-size: 20px;
+        font-weight: lighter;
+    }
+        //-webkit-text-stroke: 2px black;
+        //background: linear-gradient(40deg, rgba(255, 241, 0, 1), rgba(255, 86, 86, 1), rgba(255, 0, 253, 1));
+
+`;
+
+S.GradientBackgroundWrap = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
 `;
 
 
