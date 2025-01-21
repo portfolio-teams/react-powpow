@@ -150,7 +150,6 @@ const Main = () => {
         {/*  </S.SwiperPager>*/}
         {/*</S.SwiperContainer>*/}
 
-
             <S.GradientBackground>
                <div className="gradients-container">
                  <div className="g1"></div>
@@ -159,7 +158,10 @@ const Main = () => {
                  <div className="g4"></div>
                  <div className="g5"></div>
                </div>
-              <S.Text>여기에 글자</S.Text>
+              <S.Text>
+                <p>반려동물을 위한 컬러풀한 선택</p>
+                <p>컬러를 통해 반려동물의 성향과 스타일에 대한 정확한 분석 결과를 확인해 보세요.</p>
+              </S.Text>
              </S.GradientBackground>
 
 
