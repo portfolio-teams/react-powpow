@@ -545,7 +545,7 @@ S.GradientBackground = styled.div`
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(40deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  background: linear-gradient(40deg, rgba(183, 16, 232, 1),rgba(97, 16, 232, 1));
   top: 0;
   left: 0;
 
@@ -570,43 +570,51 @@ S.GradientBackground = styled.div`
   }
 
   .g1 {
-    background: radial-gradient(circle at center, rgba(253, 130, 11, 0.8) 0, rgba(253, 130, 11, 0) 50%) no-repeat;
-    animation: ${moveVertical} 30s ease infinite;
+    background: radial-gradient(circle at center, rgba(232, 16, 16, 1) 0, rgba(253, 130, 11, 0) 50%) no-repeat;
+    animation: ${moveVertical} 10s ease infinite;
   }
 
   .g2 {
-    background: radial-gradient(circle at center, rgba(255, 218, 58, 0.8) 0, rgba(255, 218, 58, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(56, 232, 16, 1) 0, rgba(255, 218, 58, 0) 50%) no-repeat;
     transform-origin: calc(50% - 400px);
     animation: ${moveInCircle} 20s reverse infinite;
   }
 
   .g3 {
-    background: radial-gradient(circle at center, rgba(169, 144, 221, 0.8) 0, rgba(169, 144, 221, 0) 50%) no-repeat;
-    animation: ${moveHorizontal} 30s ease infinite;
+    background: radial-gradient(circle at center, rgba(232, 228, 16, 1) 0, rgba(169, 144, 221, 0) 50%) no-repeat;
+    animation: ${moveHorizontal} 10s ease infinite;
   }
 
   .g4 {
-    background: radial-gradient(circle at center, rgba(16, 233, 231, 0.8) 0, rgba(16, 233, 231, 0) 50%) no-repeat;
-    animation: ${moveInCircle} 25s infinite;
+    background: radial-gradient(circle at center, rgba(16, 115, 232, 1) 0, rgba(16, 233, 231, 0) 50%) no-repeat;
+    animation: ${moveInCircle} 15s infinite;
   }
 
   .g5 {
-    background: radial-gradient(circle at center, rgba(34, 193, 195, 0.8) 0, rgba(34, 193, 195, 0) 50%) no-repeat;
-    animation: ${moveVertical} 35s infinite;
+    background: radial-gradient(circle at center, rgba(232, 16, 196, 1) 0, rgba(34, 193, 195, 0) 50%) no-repeat;
+    animation: ${moveVertical} 15s infinite;
   }
 `;
 
 
-S.Text = styled.p`
+S.Text = styled.div`
   position: absolute;
+  width: 1400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: #333;
+  /* font-size: 2rem; */
+  color: #FFFFFF;
   text-align: center;
   font-family: Arial, sans-serif;
   font-weight: bold;
+
+  & p:nth-child(1) {
+    font-size: 100px;
+
+  }
 `;
+
+
 
 export default S;

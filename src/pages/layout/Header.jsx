@@ -55,7 +55,7 @@ const Header = () => {
         <S.HeaderWrap className={isHover ? "active" : ""} onMouseOut={handleMouseOut}>
             <S.Header>
                 <S.LogoWrap>
-                    <Link to={"/"}><img src={`${process.env.PUBLIC_URL}/assets/images/layout/logo.png`} alt="로고" /></Link>
+                    <Link to={"/"}><img src={`${process.env.PUBLIC_URL}/assets/images/layout/logo.jpg`} alt="로고" /></Link>
                 </S.LogoWrap>
                 <S.MenuWrap onMouseOver={handleMouseOver}>
                     <S.MainMenu>
