@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CartProduct from "./CartProduct";
 import S from "./style";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+
+    const location = useLocation();
+
+    const { products } = location.state || { products: [] };
+
     const { currentUser } = useSelector((state) => state.user);
     const memberId = currentUser?.id;
 
@@ -109,7 +114,7 @@ const Cart = () => {
         return (
             <S.NoneWrap>
                 <p>장바구니가 비어있습니다.</p>
-                <Link to={"/"}>쇼핑하러 가기</Link>
+                <Link to={"/store"}>쇼핑하러 가기</Link>
             </S.NoneWrap>
         );
     }  
