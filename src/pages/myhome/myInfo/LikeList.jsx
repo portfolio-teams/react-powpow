@@ -13,14 +13,16 @@ const LikeList = () => {
     const { productLikes, commLikes } = state;
 
     const productLikeList = productLikes.map(({
-       id, productName, productFileName, productPrice
+       id, productName, productFileName, productPrice, productId
       }, index) => {
             return (
                 <S.ProductLikes key={index}>
+                    <Link to={`/store/read/${productId}`}>
                     <img
                         src={`${process.env.PUBLIC_URL}/assets/images/products/${productFileName}`}
                         alt={productName}
                     />
+                    </Link>
                     <S.ProductName>{productName}</S.ProductName>
                     <S.ProductPrice>{productPrice.toLocaleString('ko-KR')}원</S.ProductPrice>
                 </S.ProductLikes>

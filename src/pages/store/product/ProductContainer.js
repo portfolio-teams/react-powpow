@@ -170,6 +170,14 @@ const ProductContainer = () => {
         }
     }
 
+    const handleCart = () => {
+        if (foundProduct) {
+            const productWithQuantity = { ...foundProduct, quantity: count };
+            navigate("/cart", { state: {products: [productWithQuantity] } });
+        }
+    }
+
+    
     return (
         <div>
             <div className="body-container">
@@ -251,9 +259,10 @@ const ProductContainer = () => {
                         </S.ProductBox>
 
                         <S.ButtonContainer>
-                            <Link to="/cart">
+                            {/* <Link to="/cart">
                                 <S.CheckButton type="button">장바구니</S.CheckButton>
-                            </Link>
+                            </Link> */}
+                            <S.CheckButton onClick={handleCart}>장바구니</S.CheckButton>
                             <S.PaymentButton onClick={handleBuyNow}>바로구매</S.PaymentButton>
                         </S.ButtonContainer>
                     </S.ProductInfoRight>
